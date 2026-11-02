@@ -1,4 +1,4 @@
-# LAB 2 – OTP Verification Bypass
+# LAB 1 – OTP Verification Bypass
 
 ## Overview
 
