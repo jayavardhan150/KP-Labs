@@ -66,43 +66,53 @@ The screenshots below show the complete test flow, including registration, OTP s
 
 ### PoC Evidence 1
 
-![PoC Evidence 1](evidence/poc-01.png)
+<img width="1279" height="650" alt="1" src="https://github.com/user-attachments/assets/15531d21-e345-4bbc-8ed2-7c859fa0c68d" />
+
 
 ### PoC Evidence 2
 
-![PoC Evidence 2](evidence/poc-02.png)
+<img width="1277" height="656" alt="2" src="https://github.com/user-attachments/assets/65493a15-a03c-4047-84ae-bc9373a6ee94" />
+
 
 ### PoC Evidence 3
 
-![PoC Evidence 3](evidence/poc-03.png)
+<img width="1269" height="655" alt="3" src="https://github.com/user-attachments/assets/10c3dc12-d54b-4453-a091-9aa3498cae52" />
+
 
 ### PoC Evidence 4
 
-![PoC Evidence 4](evidence/poc-04.png)
+<img width="1248" height="570" alt="4" src="https://github.com/user-attachments/assets/9f691c5e-e2c7-4938-9db6-324c065a3ce0" />
+
 
 ### PoC Evidence 5
 
-![PoC Evidence 5](evidence/poc-05.png)
+<img width="1269" height="653" alt="5" src="https://github.com/user-attachments/assets/89014dd4-2771-4e6a-8100-09e7952df77d" />
+
 
 ### PoC Evidence 6
 
-![PoC Evidence 6](evidence/poc-06.png)
+<img width="1275" height="654" alt="6" src="https://github.com/user-attachments/assets/0786b63a-b58b-4b98-902b-998afb805fb9" />
+
 
 ### PoC Evidence 7
 
-![PoC Evidence 7](evidence/poc-07.png)
+<img width="1275" height="654" alt="6" src="https://github.com/user-attachments/assets/b9b57c21-289f-49fc-891b-39060ea54f32" />
+
 
 ### PoC Evidence 8
 
-![PoC Evidence 8](evidence/poc-08.png)
+<img width="1255" height="570" alt="8" src="https://github.com/user-attachments/assets/f6c49016-4e33-4771-818b-ed67d0f4fc2d" />
+
 
 ### PoC Evidence 9
 
-![PoC Evidence 9](evidence/poc-09.png)
+<img width="1254" height="651" alt="9" src="https://github.com/user-attachments/assets/2c357915-45cc-469e-afa3-fb59462506f0" />
+
 
 ### PoC Evidence 10
 
-![PoC Evidence 10](evidence/poc-10.png)
+<img width="1266" height="648" alt="10" src="https://github.com/user-attachments/assets/7817a168-8e5f-4134-a61f-9993db474d34" />
+
 
 ## Impact
 
@@ -114,10 +124,8 @@ The screenshots below show the complete test flow, including registration, OTP s
 ## Remediation
 
 - Enforce OTP verification on the server. Never rely on a browser-side response, JavaScript state, or client-controlled flag as proof of verification.
-- After a valid OTP is checked, generate a cryptographically secure, short-lived verification token on the server.
 - Bind the token to the email address and registration session.
 - Require the token when creating the account and validate it server-side before accepting registration.
 - Make the verification token single-use and invalidate it after successful account creation or expiration.
-- Apply rate limits, expiry controls, and attempt limits to OTP generation and verification.
 - Add server-side tests confirming that account creation fails when OTP verification has not succeeded.
 
